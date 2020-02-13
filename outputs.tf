@@ -20,5 +20,5 @@ output "mount_target_ids" {
 
 output "mount_target_ips" {
   description = "the list of mount target ips"
-  value       = ["${aws_efs_mount_target.efs_mount_targets.*.id}"]
+  value       = ["${aws_efs_mount_target.efs_mount_targets.*.ip_address}"]
 }
