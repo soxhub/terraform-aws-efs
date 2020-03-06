@@ -10,10 +10,11 @@ In your `.tf` file, import the module:
 ```terraform
 module "efs" {
   source  = "app.terraform.io/auditboard/efs/aws"
-  version = "1.1.0"
+  version = "1.1.x"
 
   name       = local.name
   region     = local.region
   subnet_ids = module.vpc.private_subnet_ids
+  vpc_id     = module.vpc.vpc_id
 }
 ```

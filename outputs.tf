@@ -25,5 +25,5 @@ output "mount_target_ips" {
 
 output "security_group_id" {
   description = "the default security group id of the EFS"
-  value = aws_security_group.efs_security_group.id
+  value       = aws_security_group.efs_security_group.id
 }
