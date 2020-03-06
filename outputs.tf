@@ -23,3 +23,7 @@ output "mount_target_ips" {
   value       = [aws_efs_mount_target.efs_mount_targets.*.ip_address]
 }
 
+output "security_group_id" {
+  description = "the default security group id of the EFS"
+  value = aws_security_group.efs_security_group.id
+}
