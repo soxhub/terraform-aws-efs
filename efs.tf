@@ -14,3 +14,12 @@ resource "aws_efs_mount_target" "efs_mount_targets" {
   subnet_id      = var.subnet_ids[count.index]
 }
 
+resource "aws_security_group" "efs_security_group" {
+  name        = "${var.name}"
+  description = "Default EFS security group"
+  vpc_id      = var.vpc_id
+
+  tags = {
+    Name = var.name
+  }
+}
