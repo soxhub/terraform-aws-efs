@@ -6,6 +6,10 @@ variable "region" {
   description = "the region the EFS file system resides in"
 }
 
+variable "vpc_id" {
+  description = "the id of the VPC to create the security group in"
+}
+
 variable "encrypted" {
   description = "whether the EFS file system is encrypted or not"
 
@@ -41,4 +45,3 @@ variable "subnet_ids" {
 
   default = []
 }
-
