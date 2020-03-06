@@ -12,7 +12,7 @@ resource "aws_efs_mount_target" "efs_mount_targets" {
 
   file_system_id = aws_efs_file_system.efs.id
   subnet_id      = var.subnet_ids[count.index]
-  security_groups = [aws_security_group.efs_security_group]
+  security_groups = [aws_security_group.efs_security_group.id]
 }
 
 resource "aws_security_group" "efs_security_group" {
