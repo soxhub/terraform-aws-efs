@@ -15,7 +15,7 @@ resource "aws_efs_mount_target" "efs_mount_targets" {
 }
 
 resource "aws_security_group" "efs_security_group" {
-  name        = "${var.name}"
+  name        = "${var.name}-efs"
   description = "Default EFS security group"
   vpc_id      = var.vpc_id
 
